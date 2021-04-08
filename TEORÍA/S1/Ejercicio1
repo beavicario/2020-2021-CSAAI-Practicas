@@ -1,0 +1,19 @@
+
+¿Qué ocurre si el usuario pincha en el enlace hacia el documento C?
+
+El cliente solicita al servidor el documento HTML C mediante un GET con el protocolo HTTP,
+el servidor responde a la petición enviando el documento HTML.
+
+El cliente abre el documento y lo analiza, además renderiza esta nueva página. 
+El documento C necesita renderizar la imagen D, por lo que el cliente le lanza una nueva
+petición al servidor, donde solicita la imagen. El servidor responde a esa petición
+enviando la imagen D al cliente.
+
+El cliente renderiza esa imagen junto con el documento HTML C.
+
+Ahora tanto el documento HTML C al que está asociado el enlace, 
+como la imagen D que está asociada al documento C, se han guardado en la memoria 
+del cliente.
+
+
+
