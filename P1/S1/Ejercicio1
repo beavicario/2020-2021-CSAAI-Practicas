@@ -14,6 +14,4 @@ El cliente renderiza esa imagen junto con el documento HTML C.
 Ahora tanto el documento HTML C al que está asociado el enlace, 
 como la imagen D que está asociada al documento C, se han guardado en la memoria 
 del cliente.
-
-
-
+ ---
