@@ -1,0 +1,19 @@
+
+body {
+    background-color: lightblue;
+    color:black;
+  }
+  
+  .migrupo {
+    background-color: blue;
+    color: white
+  }
+  
+  p {
+    background-color: orange;
+  }
+
+/* Color de fondo azul claro y color de letra negro al cuerpo.
+/* Color de fondo azul y color de letra blanco para todas las etiquetas de class="migrupo".
+    En el HTML se ha agrupado en la clase 'migrupo' los encabezados h1 y h2.
+/* Color de fondo naranja a párrafo.

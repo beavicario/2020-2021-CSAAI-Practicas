@@ -1,0 +1,25 @@
+
+body {
+    background-color: lightblue;
+    color: black;
+  }
+  
+  h1 {
+    background-color: yellow;
+    color: green;
+  }
+  
+  p {
+    background-color: orange;
+  }
+  
+  /* Estilo Solo para el párrafo "especial" */
+  #especial {
+    background-color: green;
+    color: white;
+  }
+
+/* Color de fondo azul claro y color de letra negro al cuerpo.
+/* Color de fondo amarillo y color de letra verde a encabezado h1.
+/* Color de fondo naranja a párrafo.
+/* Color de fondo verde y color de letra blanco SOLO para el párrafo con id="especial".

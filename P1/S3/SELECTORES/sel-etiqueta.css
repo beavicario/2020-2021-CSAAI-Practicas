@@ -1,0 +1,18 @@
+
+body {
+    background-color: lightblue;
+    color: black;
+  }
+  
+  h1 {
+    background-color: yellow;
+    color: green;
+  }
+  
+  p {
+    background-color: orange;
+  }
+
+/* Color de fondo azul claro y color de letra negro al cuerpo.
+/* Color de fondo amarillo y color de letra verde a encabezado h1.
+/* Color de fondo naranja a párrafo.
