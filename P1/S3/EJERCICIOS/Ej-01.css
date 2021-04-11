@@ -1,0 +1,20 @@
+
+#unico {
+    color: red;
+  }
+  
+  .resaltado {
+    color: orange;
+  }
+  
+  p {
+    color: blue;
+  }
+
+
+/* ¿En qué colores aparecen los textos en la web?
+
+/* Color de letra rojo SOLO para el encabezado h3 con id="unico".
+/* Color de letra naranja para todas las etiquetas de class="resaltado".
+/* En el HTML se ha agrupado en la clase 'migrupo' los encabezados h1 y h2.
+/* Color de letra azul a párrafo.
