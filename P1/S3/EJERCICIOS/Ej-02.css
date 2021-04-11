@@ -1,0 +1,42 @@
+
+#quien {
+    color: orange;
+  }
+  
+  .cual {
+    color: green;
+  }
+  
+  /* Regla de estilo 1 */
+  p {
+    color: blue;
+  }
+  
+  /* Regla de estilo 2 */
+  div {
+    color: yellow;
+  }
+  
+  body {
+    color: pink;
+  }
+
+/* Determinar de qué color se renderizarán los textos P1, P2, P3 y P4. 
+
+/* P1 trendrá un color de letra rojo ya que tiene estilo definido sobre las etiquetas HTML
+/* Aplicando la regla 1 tiene prioridad sobre el estilo de párrafo aplicado en la hoja de estilo.
+/* P2 tendrá un color de letra naranja ya que se le aplica el estilo de su identificador
+/* id="quien" que, aplicando la regla 5, tiene prioridad sobre el párrafo.
+/* P3 tendrá un color de letra verde ya que se le aplica el estilo de su clase
+/* class="cual" que, aplicando la regla 5, tiene prioridad sobre el párrafo.
+/* P4 tendrá un color de letra azul ya que se le aplica el estilo del párrafo.
+
+/* ¿Cual sería el color de P4 si se elimina la regla de estilo 1?.
+/* P4 si no tuviera estilo de párrafo definido se aplicaría la regla 4 y lo heredaria 
+/* del elemento superior más cercano que sí tuviera un estilo definido. 
+/* En este caso, sería el estilo del bloque div, por lo que P4 trendría un color de letra amarillo.
+
+/* ¿Cuál sería el color de P4 si se eliminan las reglas de estilo 1 y 2?
+/* P4 si no tuviera estilo de párrafo definido se aplicaría la regla 4 y lo heredaria 
+/* del elemento superior más cercano que sí tuviera un estilo definido. 
+/* En este caso, sería el estilo del cuerpo, por lo que P4 trendría un color de letra rosa.

@@ -1,0 +1,15 @@
+
+body {
+    padding: 5px; /* Relleno */
+    margin: 10px; /* Margen */ 
+    border: solid;
+    border-color: red;
+  }
+  
+  /*  Propiedades de la caja del párrafo */
+  p {
+    margin: 5px;
+    padding: 10px; /* Relleno */
+    border:solid;
+    border-color: blue;
+  }
