@@ -1,0 +1,1 @@
+Este archivo de texto es la prueba 2 para VSCode.
