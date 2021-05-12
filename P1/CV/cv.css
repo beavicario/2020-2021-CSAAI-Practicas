@@ -1,6 +1,6 @@
 
 body{
-    background-image: url(imagenes/5709.jpg);
+    background-image: url(imagenes/selva.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -22,8 +22,9 @@ hr{
   margin: 0 auto;
 }
 #datos{
-  float: left;
+  float: right;
   width: 40%;
+  opacity: 0.8;
 }
 #seccion{
   float: right;
@@ -32,8 +33,7 @@ hr{
 }
 .perfil{
   margin-left: 2px;
-  padding:8px 8px 70px 8px;
-  background-color: #f5f5f5;
-  width: 272px;
-  border: 1px solid #999999;
+  padding:8px 8px 8px 8px;
+  width: 300px;
+  border: black;
 }
