@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtros Imágenes</title>
+    <link rel="stylesheet" href="master.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <img id="imagesrc1" class="image" src="tiburon.jpg">
+    <img id="imagesrc2" class="image" src="guepardo.jpg">    
+    <img id="imagesrc3" class="image" src="serpiente.jpg">
+
+    <canvas id="canvas"></canvas>
+
+    <div id="container">
+        <button id="b&w" class="button">B&W</button>
+        <button id="rgb" class="button">RGB</button>
+        <button id="mirror" class="button">MIRROR</button>
+        <button id="down" class="button">DOWN</button>
+        <button id="noise" class="button">NOISE</button>
+        <br><br>
+        <input type="range" id="redslider" min="0" max="255" value="255" />RED: <span id="redrange">255</span>
+        <br>
+        <input type="range" id="greenslider" min="0" max="255" value="255" />GREEN: <span id="greenrange">255</span>
+        <br>
+        <input type="range" id="blueslider" min="0" max="255" value="255" />BLUE: <span id="bluerange">255</span>   
+    </div>   
+</body>
+</html>
