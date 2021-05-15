@@ -34,11 +34,14 @@ img1.onclick = function(){
     canvas.height = img.height;
     ctx.drawImage(img, 0,0, img.width, img.height);
     redSlider.value = 255;
-    redRange.innerHTML = "255"
+    redRange.innerHTML = "255";
     greenSlider.value = 255;
-    greenRange.innerHTML = "255"
+    greenRange.innerHTML = "255";
     blueSlider.value = 255;
-    blueRange.innerHTML = "255"
+    blueRange.innerHTML = "255";
+    redSlider.disabled = false;
+    greenSlider.disabled = false;
+    blueSlider.disabled = false;
 }
 
 img2.onclick = function(){
@@ -47,11 +50,15 @@ img2.onclick = function(){
     canvas.height = img.height;
     ctx.drawImage(img, 0,0, img.width, img.height);
     redSlider.value = 255;
-    redRange.innerHTML = "255"
+    redRange.innerHTML = "255";
     greenSlider.value = 255;
-    greenRange.innerHTML = "255"
+    greenRange.innerHTML = "255";
     blueSlider.value = 255;
-    blueRange.innerHTML = "255"
+    blueRange.innerHTML = "255";
+    redSlider.disabled = false;
+    greenSlider.disabled = false;
+    blueSlider.disabled = false;
+
 }
 
 img3.onclick = function(){
@@ -60,11 +67,15 @@ img3.onclick = function(){
     canvas.height = img.height;
     ctx.drawImage(img, 0,0, img.width, img.height);
     redSlider.value = 255;
-    redRange.innerHTML = "255"
+    redRange.innerHTML = "255";
     greenSlider.value = 255;
-    greenRange.innerHTML = "255"
+    greenRange.innerHTML = "255";
     blueSlider.value = 255;
-    blueRange.innerHTML = "255"
+    blueRange.innerHTML = "255";
+    redSlider.disabled = false;
+    greenSlider.disabled = false;
+    blueSlider.disabled = false;
+
 }
 
 bwButton.onclick = function(){
