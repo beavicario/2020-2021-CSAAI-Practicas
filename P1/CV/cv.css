@@ -1,36 +1,38 @@
 
 body{
     background-image: url(imagenes/selva.jpg);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    font-family: Archivo;
 }
+
 fieldset{
   background-color: white;
 }
+
 hr{
   width: 90%;
   float: left;
 }
-.comentario{
-  margin-right: 10%;
-}
+
 #contenido{
   width: 900px;
   margin: 0 auto;
 }
+
 #datos{
   float: right;
   width: 40%;
   opacity: 0.8;
 }
+
 #seccion{
   float: right;
   width: 60%;
   opacity: 0.8;
 }
+
+.comentario{
+  margin-right: 10%;
+}
+
 .perfil{
   margin-left: 2px;
   padding:8px 8px 8px 8px;
