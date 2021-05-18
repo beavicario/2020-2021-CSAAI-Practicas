@@ -1,0 +1,56 @@
+
+body{
+    background-color: white;
+}
+
+.line{
+    margin-bottom: 5px;
+}
+
+.container{
+    background-image: url(calc.jpg);
+    padding-top:10px;
+    padding-bottom: 10px;
+    border: 4px groove;
+    border-color: gray;
+    text-align: center;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 20px 20px 20px 20px;
+    width: 450px;
+}
+
+p{
+    background-color: gainsboro;
+    color: black;
+    text-align: right;
+    font-size: 55px;
+    width: 380px;
+    height: 90px;
+    border: 3px ridge;
+    border-color: black;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* Para no salirnos del display */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip clip;
+}
+
+button{
+    background-color:white;
+    color: black;
+    padding: 14px;
+    font-size: 22px;
+    margin: 5px 2px;
+    margin-left: 16px;
+    border-radius: 20px 20px 20px 20px;
+    border: 3px solid black;
+    width: 75px;
+}
+
+button:hover{
+  background-color: gainsboro;
+}
