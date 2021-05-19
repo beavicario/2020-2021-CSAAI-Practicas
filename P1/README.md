@@ -1,6 +1,8 @@
 
 La práctica 1 consta de el CV de Jane Goodall, una etóloga famosa por ser pionera en el estudio de los chimpacés salvajes.
 
+Puedes visualizar la práctica desde la siguiente URL: https://beavicario.github.io/2020-2021-CSAAI-Practicas/P1/CV/
+
 El desarrollo de esta página está compuesto por un HTML y una hoja de estilo CSS.
 
 La estrutura del HTML se forma por una cabecera con el título de la página, y el enlace que relaciona el HTML con el CSS, y un cuerpo.
