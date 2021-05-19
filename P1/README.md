@@ -1,12 +1,12 @@
 
-La práctica 1 consta de el CV de Jane Goodall, una etóloga famosa por ser pionera en el estudio de los chimpacés salvajes.
+La práctica 1 consta de el CV de Jane Goodall, una etóloga famosa por ser pionera en el estudio de los chimpancés salvajes.
 
 Puedes visualizar la práctica desde la siguiente URL: https://beavicario.github.io/2020-2021-CSAAI-Practicas/P1/CV/
 
 El desarrollo de esta página está compuesto por un HTML y una hoja de estilo CSS.
 
-La estrutura del HTML se forma por una cabecera con el título de la página, y el enlace que relaciona el HTML con el CSS, y un cuerpo.
-En el cuerpo, tenemos un una sección genérica de tipo bloque 'div' principal, con el identificador 'contenido'. Y dentro de ella otras dos secciones de tipo bloque segundarias 'div' con los identificadores 'sección' y 'datos'.
+La estructura del HTML se forma por una cabecera con el título de la página, y el enlace que relaciona el HTML con el CSS, y un cuerpo.
+En el cuerpo, tenemos un una sección genérica de tipo bloque 'div' principal, con el identificador 'contenido'. Y dentro de ella otras dos secciones de tipo bloque secundarias 'div' con los identificadores 'sección' y 'datos'.
 
 Cada apartado de nuestro CV se divide en cajas o bloques 'fieldset'. 
 Dentro de 'sección' tenemos un bloque con una introducción sobre estudios de Jane Goodall, otro bloque sobre su vida personal y un último bloque con su condecoraciones. Todos los encabezado de título van acompañados de una imagen.
@@ -21,4 +21,4 @@ En cuestiones de estilo, tenemos un fondo con una imagen de la selva y cada caja
 
 Por último tenemos la clase 'comentario' con un margen del 10%, y la clase 'perfil' con un margen izquierdo, un relleno, un ancho y un borde negro.
 
-En esta carpeta P1 tambiñen puedes encontrar los ejercicios de las sesiones de teoría y Laboratorios de la asignatura.
+En esta carpeta P1 también puedes encontrar los ejercicios de las sesiones de teoría y Laboratorios de la asignatura.
