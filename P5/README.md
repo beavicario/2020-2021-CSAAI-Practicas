@@ -6,9 +6,9 @@ Una vez se estén reproduciendo ambos videos, sin sonido y minimizados, existen 
 
 Si pulsas la tecla 'VIDEO 1' o la tecla 'VIDEO 2' se reproducirán en pantalla grande el video que se haya indicado y con sonido. Para parar la reproducción en pantalla grande se pulsa la tecla TEST.
 
-Tenemos dos opciones más, la tecla 'AUTO' reproduce un pequeño fragmento de cada vídeo alternativamente. Esta tecla anula la fun8ción 'LOOP'. Para salir del modo 'AUTO' se vuelve a pulsar dicha tecla.
+Tenemos dos opciones más, la tecla 'AUTO' reproduce un pequeño fragmento de cada vídeo alternativamente. Esta tecla anula la función 'LOOP'. Para salir del modo 'AUTO' se vuelve a pulsar dicha tecla, y se apagan todas las fuentes de video.
 
-La tecla 'LOOP', que anula la función 'AUTO' cuando se activa, se debe pulsar seguido de uno de los videos para poder reproducir en bucle un fragmento de la trama. Para salir del modo 'LOOP' se vuelve a pulsar dicha tecla.
+La tecla 'LOOP', que anula la función 'AUTO' cuando se activa, se debe pulsar uno de los videos para poder reproducir en bucle un fragmento de la trama. Para salir del modo 'LOOP' se vuelve a pulsar dicha tecla.
 
 Por último 'FUENTES OFF' detiene todas las reproducciones.
 
