@@ -16,3 +16,4 @@ La variable raqueta se mueven con las flechas del teclado en el sentido horizont
 
 Por último se crean los ladrillos que explotan cuando las bola los golpea.
 
+En esta carpeta P3 también puedes encontrar los ejercicios de las sesiones de teoría y Laboratorios de la asignatura.
