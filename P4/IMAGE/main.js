@@ -1,8 +1,8 @@
 
 const canvas = document.getElementById('canvas');
-const img1 = document.getElementById('imagesrc1')
-const img2 = document.getElementById('imagesrc2')
-const img3 = document.getElementById('imagesrc3')
+const img1 = document.getElementById('imagesrc1');
+const img2 = document.getElementById('imagesrc2');
+const img3 = document.getElementById('imagesrc3');
 const ctx = canvas.getContext('2d');
 const bwButton = document.getElementById('b&w');
 const rgbButton = document.getElementById('rgb');
