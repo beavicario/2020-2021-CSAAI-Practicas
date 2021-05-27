@@ -1,6 +1,9 @@
 
 En esta última práctica jugamos con el vídeo.
 
+Puedes visualizar la práctica desde la siguiente URL: https://beavicario.github.io/2020-2021-CSAAI-Practicas/P5/VIDEO/
+
+
 Para iniciar el programa se debe pulsar el botón 'FUENTES ON'. 
 Una vez se estén reproduciendo ambos videos, sin sonido y minimizados, existen varias opciones. 
 
