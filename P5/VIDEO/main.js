@@ -36,7 +36,6 @@ fuentesOn.onclick =  function(){
     video2.muted =  true
 
     directo.poster = testImage
-
 }
 
 fuentesOff.onclick =  function(){
