@@ -1,7 +1,9 @@
 
 const canvas = document.getElementById("gameCanvas")
+const levelButton = document.getElementsByTagName("level")
+
 canvas.width = 400
-canvas.height = 800
+canvas.height = 600
 const ctx = canvas.getContext("2d")
 const STATES = {
     WAITING: 0,
@@ -17,7 +19,7 @@ let gameState = {
     draw: function(){
         ctx.textAlign = "center"
         ctx.font = "15pt Calibri"
-        ctx.fillStyle = "black"
+        ctx.fillStyle = "white"
         ctx.fillText("LIVES " + String(this.lives) + "    SCORE " + String(this.score), canvas.width /2, 20)
         if (this.state == STATES.WAITING) {
             ctx.fillText("PRESS SPACEBAR TO START", canvas.width /2, 40)
@@ -45,7 +47,7 @@ let paddle = {
     draw: function(){
         ctx.beginPath()
         ctx.rect(this.x, this.y, this.width, this.height)
-        ctx.fillStyle = "black"
+        ctx.fillStyle = "white"
         ctx.fill()
         ctx.closePath()
     },
@@ -86,14 +88,14 @@ paddle.boundingBox = {
 let ball = {
     x: canvas.width /2,
     y: canvas.height /2,
-    radius: 10,
+    radius: 15,
     dx: 0,
     dy: 0,
     boundingBox: {},
     draw: function(){
         ctx.beginPath()
         ctx.arc (this.x, this.y, this.radius, 0, 2*Math.PI)
-        ctx.fillStyle = "black"
+        ctx.fillStyle = "white"
         ctx.fill()
         ctx.closePath()
     },
@@ -179,7 +181,7 @@ ball.boundingBox = {
 
 let bricks = {
     all: [],
-    rows: 5,
+    rows: 6,
     cols: 9,
     draw: function(){
         for (let i = 0; i < this.all.length; i++) {
@@ -187,7 +189,7 @@ let bricks = {
             if (brick.visible) {
                 ctx.beginPath()
                 ctx.rect(brick.x, brick.y, brick.width, brick.height)
-                ctx.fillStyle = "black"
+                ctx.fillStyle = "white"
                 ctx.fill()
                 ctx.closePath()
             }
@@ -267,7 +269,7 @@ function checkCollisions(){
         if (brick.visible) {
             if (ball.collide(brick)) {
                 ball.dy *= (-1)
-                gameState.score++
+                gameState.score += 100
                 brick.visible = false
                 break
             }
