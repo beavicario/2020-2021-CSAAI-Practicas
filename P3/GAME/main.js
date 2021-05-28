@@ -1,6 +1,13 @@
 
 const canvas = document.getElementById("gameCanvas")
-const levelButton = document.getElementsByTagName("level")
+const easyButton = document.getElementById("easy")
+const mediumButton = document.getElementById("medium")
+const hardButton = document.getElementById("hard")
+const paddleSound = new Audio('pong-raqueta.mp3');
+const reboundSound = new Audio('pong-rebote.mp3');
+const pointSound = new Audio('pong-tanto.mp3');
+
+
 
 canvas.width = 400
 canvas.height = 600
@@ -27,6 +34,8 @@ let gameState = {
     },
     update: function(){
         if (this.score == maxScore) {
+            pointSound.currentTime = 0
+            pointSound.play()
             alert("YOU WIN")
             location.reload()
         }
@@ -198,7 +207,7 @@ let bricks = {
     }
 }
 
-maxScore = bricks.rows * bricks.cols
+maxScore = (bricks.rows * bricks.cols) * 100
 
 for (let i = 0; i < bricks.rows; i++) {
     for (let j = 0; j < bricks.cols; j++) {
@@ -234,7 +243,7 @@ for (let i = 0; i < bricks.rows; i++) {
         bricks.all.push(brick)
     }
     
-}
+} 
 
 document.addEventListener("keydown", (e) => {
     if (e.keyCode == 39) {
@@ -250,9 +259,25 @@ document.addEventListener("keydown", (e) => {
         gameState.state = STATES.PLAYING
         ball.dx = 2
         ball.dy = 2
-        
     }
 })
+
+easyButton.onchange = () => {
+    ball.dx = 2
+    ball.dy = 2 
+}
+
+mediumButton.onchange = () => {
+    ball.dx = 3
+    ball.dy = 3 
+}
+
+hardButton.onchange = () => {
+    ball.dx = 5
+    ball.dy = 5 
+}
+
+
 
 document.addEventListener ("keyup", (e) => {
     if (e.keyCode == 39 || e.keyCode == 37) {
@@ -263,12 +288,16 @@ document.addEventListener ("keyup", (e) => {
 function checkCollisions(){
     if (ball.collide(paddle)) {
         ball.dy *= (-1)
+        paddleSound.currentTime = 0
+        paddleSound.play()
     }
     for (let i = 0; i < bricks.all.length; i++) {
         let brick = bricks.all[i]
         if (brick.visible) {
             if (ball.collide(brick)) {
                 ball.dy *= (-1)
+                reboundSound.currentTime = 0
+                reboundSound.play()   
                 gameState.score += 100
                 brick.visible = false
                 break
