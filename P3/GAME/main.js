@@ -237,13 +237,13 @@ for (let i = 0; i < bricks.rows; i++) {
 }
 
 document.addEventListener("keydown", (e) => {
-    if (e.key == 39) {
+    if (e.keyCode == 39) {
         paddle.dx = 2
     }
-    if (e.key == 37) {
+    if (e.keyCode == 37) {
         paddle.dx = -2
     }
-    if (e.key == 32) {
+    if (e.keyCode == 32) {
         if (gameState.state == STATES.PLAYING) {
             return
         }
@@ -255,7 +255,7 @@ document.addEventListener("keydown", (e) => {
 })
 
 document.addEventListener ("keyup", (e) => {
-    if (e.key == 39 || e.key == 37) {
+    if (e.keyCode == 39 || e.keyCode == 37) {
         paddle.dx = 0
     }
 })
