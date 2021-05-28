@@ -10,7 +10,7 @@ const pointSound = new Audio('pong-tanto.mp3');
 
 
 canvas.width = 400
-canvas.height = 800
+canvas.height = 600
 const ctx = canvas.getContext("2d")
 const STATES = {
     WAITING: 0,
@@ -191,7 +191,7 @@ ball.boundingBox = {
 let bricks = {
     all: [],
     rows: 6,
-    cols: 9,
+    cols: 10,
     draw: function(){
         for (let i = 0; i < this.all.length; i++) {
             let brick = this.all[i]
