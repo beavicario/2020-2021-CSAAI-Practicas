@@ -10,7 +10,7 @@ const pointSound = new Audio('pong-tanto.mp3');
 
 
 canvas.width = 400
-canvas.height = 600
+canvas.height = 800
 const ctx = canvas.getContext("2d")
 const STATES = {
     WAITING: 0,
@@ -263,18 +263,48 @@ document.addEventListener("keydown", (e) => {
 })
 
 easyButton.onchange = () => {
-    ball.dx = 2
-    ball.dy = 2 
+    if (ball.dx < 0) {
+        ball.dx = -2     
+    }
+    if (ball.dx > 0) {
+        ball.dx = 2      
+    }
+    if (ball.dy < 0) {
+        ball.dy = -2      
+    }
+    if (ball.dy > 0) {
+        ball.dy = 2      
+    }
 }
 
 mediumButton.onchange = () => {
-    ball.dx = 3
-    ball.dy = 3 
+    if (ball.dx < 0) {
+        ball.dx = -5     
+    }
+    if (ball.dx > 0) {
+        ball.dx = 5      
+    }
+    if (ball.dy < 0) {
+        ball.dy = -5      
+    }
+    if (ball.dy > 0) {
+        ball.dy = 5      
+    }
 }
 
 hardButton.onchange = () => {
-    ball.dx = 5
-    ball.dy = 5 
+    if (ball.dx < 0) {
+        ball.dx = -7     
+    }
+    if (ball.dx > 0) {
+        ball.dx = 7      
+    }
+    if (ball.dy < 0) {
+        ball.dy = -7      
+    }
+    if (ball.dy > 0) {
+        ball.dy = 7      
+    }
 }
 
 
