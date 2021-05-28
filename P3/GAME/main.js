@@ -7,8 +7,6 @@ const paddleSound = new Audio('pong-raqueta.mp3');
 const reboundSound = new Audio('pong-rebote.mp3');
 const pointSound = new Audio('pong-tanto.mp3');
 
-
-
 canvas.width = 400
 canvas.height = 600
 const ctx = canvas.getContext("2d")
@@ -190,8 +188,8 @@ ball.boundingBox = {
 
 let bricks = {
     all: [],
-    rows: 6,
-    cols: 10,
+    rows: 9,
+    cols: 9,
     draw: function(){
         for (let i = 0; i < this.all.length; i++) {
             let brick = this.all[i]
@@ -262,6 +260,12 @@ document.addEventListener("keydown", (e) => {
     }
 })
 
+document.addEventListener ("keyup", (e) => {
+    if (e.keyCode == 65 || e.keyCode == 68) {
+        paddle.dx = 0
+    }
+})
+
 easyButton.onchange = () => {
     if (ball.dx < 0) {
         ball.dx = -2     
@@ -306,14 +310,6 @@ hardButton.onchange = () => {
         ball.dy = 7      
     }
 }
-
-
-
-document.addEventListener ("keyup", (e) => {
-    if (e.keyCode == 65 || e.keyCode == 68) {
-        paddle.dx = 0
-    }
-})
 
 function checkCollisions(){
     if (ball.collide(paddle)) {
