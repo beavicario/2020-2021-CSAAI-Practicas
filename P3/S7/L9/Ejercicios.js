@@ -1,7 +1,8 @@
 
 const canvas = document.getElementById("gameCanvas")
-const paddleSound = new Audio('P3_L9_pong-raqueta.mp3');
-const reboundSound = new Audio('P3_L9_pong-rebote.mp3');
+const startButton = document.getElementById("start")
+const paddleSound = new Audio('P3_L9_pong-raqueta.mp3')
+const reboundSound = new Audio('P3_L9_pong-rebote.mp3')
 
 
 canvas.width = 400
@@ -22,7 +23,7 @@ let gameState = {
         ctx.fillStyle = "black"
         ctx.fillText("LIVES " + String(this.lives), canvas.width /2, 20)
         if (this.state == STATES.WAITING) {
-            ctx.fillText("PRESS SPACEBAR TO START", canvas.width /2, 40)
+            ctx.fillText("PRESS BUTTON START", canvas.width /2, 40)
         }
     },
     update: function(){
@@ -175,21 +176,21 @@ ball.boundingBox = {
     }
 }
 
+startButton.onclick = function(){
+    if (gameState.state == STATES.PLAYING) {
+        return
+    }
+    gameState.state = STATES.PLAYING
+    ball.dx = 2
+    ball.dy = 2
+}
+
 document.addEventListener("keydown", (e) => {
     if (e.keyCode == 39) {
         paddle.dx = 2
     }
     if (e.keyCode == 37) {
         paddle.dx = -2
-    }
-    if (e.keyCode == 32) {
-        if (gameState.state == STATES.PLAYING) {
-            return
-        }
-        gameState.state = STATES.PLAYING
-        ball.dx = 2
-        ball.dy = 2
-        
     }
 })
 
