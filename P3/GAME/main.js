@@ -246,10 +246,10 @@ for (let i = 0; i < bricks.rows; i++) {
 } 
 
 document.addEventListener("keydown", (e) => {
-    if (e.keyCode == 39) {
+    if (e.keyCode == 68) {
         paddle.dx = 2
     }
-    if (e.keyCode == 37) {
+    if (e.keyCode == 65) {
         paddle.dx = -2
     }
     if (e.keyCode == 32) {
@@ -310,7 +310,7 @@ hardButton.onchange = () => {
 
 
 document.addEventListener ("keyup", (e) => {
-    if (e.keyCode == 39 || e.keyCode == 37) {
+    if (e.keyCode == 65 || e.keyCode == 68) {
         paddle.dx = 0
     }
 })
