@@ -1,72 +1,41 @@
 
-body {
+body{
   background-image: url(imagenes/selva.jpg);
 }
 
-fieldset {
-  background-color: white;
+fieldset{
+background-color: white;
 }
 
-hr {
-  width: 100%;
-  float: left;
+hr{
+width: 90%;
+float: left;
 }
 
-#contenido {
-  max-width: 900px;
-  margin: 0 auto;
+#contenido{
+width: 900px;
+margin: 0 auto;
 }
 
-#datos {
-  float: right;
-  width: 40%;
-  opacity: 0.8;
+#datos{
+float: right;
+width: 40%;
+opacity: 0.8;
 }
 
-#seccion {
-  float: right;
-  width: 60%;
-  opacity: 0.8;
+#seccion{
+float: right;
+width: 60%;
+opacity: 0.8;
 }
 
-.comentario {
-  margin-right: 10%;
+.comentario{
+margin-right: 10%;
 }
 
-.perfil {
-  margin-left: 2px;
-  padding: 8px 8px 8px 8px;
-  width: 300px;
-  border: black;
-}
-
-@media (max-width: 992px) {
-  #contenido {
-      width: 100%;
-  }
-  .perfil {
-      width: calc(100% - 20px);
-  }
-  #seccion {
-      width: 50%;
-  }
-  #datos {
-      width: 50%;
-  }
-}
-
-@media (max-width: 520px) {
-  #contenido {
-      display: flex;
-      flex-direction: column;
-  }
-  #seccion {
-      width: 100%;
-      order: 2;
-  }
-  #datos {
-      width: 100%;
-      margin-bottom: 20px;
-      order: 1;
-  }
+.perfil{
+margin-left: 2px;
+padding:8px 8px 8px 8px;
+width: 300px;
+border: black;
 }
