@@ -12,6 +12,8 @@ La bola también rebota en la raqueta y en los ladrillos, no sin antes explotar 
 
 El juego comienza pulsando la barra espaciadora, en el margen superior nos encontramos con las vidas y con la puntuación, que irá aumentando a medida que explotes ladrillos. En el momento que las vidas lleguen a 0, aparecerá una alert de 'GAME OVER' y el juego habrá terminado. Si eliminas todos los ladrillos ¡Habrás ganado!
 
+El movimiento de la raqueta se realiza con las teclas 'A' (izquierda) y  'D' (derecha). Además el juego consta de tres niveles donde la dificultad que presentan es el aumento de velocidad de la bola.
+
 La variable raqueta se mueven con las flechas del teclado en el sentido horizontal. Tampoco se podrá salir del terreno de juego.
 
 Por último se crean los ladrillos que explotan cuando las bola los golpea.
