@@ -35,10 +35,12 @@ let gameState = {
             pointSound.currentTime = 0
             pointSound.play()
             alert("YOU WIN")
+            easyButton.checked = true
             location.reload()
         }
         if (this.lives == 0) {
             alert("GAME OVER")
+            easyButton.checked = true
             location.reload()
         }
     }
@@ -98,6 +100,12 @@ let ball = {
     radius: 15,
     dx: 0,
     dy: 0,
+    speed: 2,
+    angle: {
+        x: 0,
+        y: 0,
+        all: [-0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75]
+    },
     boundingBox: {},
     draw: function(){
         ctx.beginPath()
@@ -127,13 +135,13 @@ let ball = {
         return false
     },
     update: function(){
-        if (this.x + this.dx - this.radius < 0 || this.x + this.dx + this.radius > canvas.width) {
+        if (this.x + this.dx * this.speed + this.angle.x - this.radius < 0 || this.x + this.dx * this.speed + this.angle.x + this.radius > canvas.width) {
             this.dx *= (-1)
         }
-        if (this.y + this.dy - this.radius < 0) {
+        if (this.y + this.dy * this.speed + this.angle.y - this.radius < 0) {
             this.dy *= (-1)
         }
-        if (this.y + this.dy + this.radius > canvas.height) {
+        if (this.y + this.dy * this.speed + this.angle.y + this.radius > canvas.height) {
             gameState.lives--
             gameState.state = STATES.WAITING
             this.dx = 0
@@ -150,16 +158,16 @@ let ball = {
             this.boundingBox.botttom.right.y = this.y + this.radius 
             return 
         }
-        this.x += this.dx
-        this.y += this.dy
-        this.boundingBox.top.left.x += this.dx
-        this.boundingBox.top.right.x += this.dx
-        this.boundingBox.botttom.left.x += this.dx
-        this.boundingBox.botttom.right.x += this.dx
-        this.boundingBox.top.left.y += this.dy
-        this.boundingBox.top.right.y += this.dy
-        this.boundingBox.botttom.left.y += this.dy
-        this.boundingBox.botttom.right.y += this.dy
+        this.x += this.dx * this.speed + this.angle.x
+        this.y += this.dy * this.speed + this.angle.y
+        this.boundingBox.top.left.x += this.dx * this.speed + this.angle.x
+        this.boundingBox.top.right.x += this.dx * this.speed + this.angle.x
+        this.boundingBox.botttom.left.x += this.dx * this.speed + this.angle.x
+        this.boundingBox.botttom.right.x += this.dx * this.speed + this.angle.x
+        this.boundingBox.top.left.y += this.dy * this.speed + this.angle.y
+        this.boundingBox.top.right.y += this.dy * this.speed + this.angle.y
+        this.boundingBox.botttom.left.y += this.dy * this.speed + this.angle.y
+        this.boundingBox.botttom.right.y += this.dy * this.speed + this.angle.y
     }
 }
 
@@ -255,8 +263,11 @@ document.addEventListener("keydown", (e) => {
             return
         }
         gameState.state = STATES.PLAYING
-        ball.dx = 2
-        ball.dy = 2
+        let l = [-1, 1]
+        ball.dx = l[Math.floor(Math.random()* l.length)]
+        ball.dy = l[Math.floor(Math.random()* l.length)]
+        ball.angle.x = 0
+        ball.angle.y = 0
     }
 })
 
@@ -267,53 +278,25 @@ document.addEventListener ("keyup", (e) => {
 })
 
 easyButton.onchange = () => {
-    if (ball.dx < 0) {
-        ball.dx = -2     
-    }
-    if (ball.dx > 0) {
-        ball.dx = 2      
-    }
-    if (ball.dy < 0) {
-        ball.dy = -2      
-    }
-    if (ball.dy > 0) {
-        ball.dy = 2      
-    }
+    ball.speed = 2
 }
 
 mediumButton.onchange = () => {
-    if (ball.dx < 0) {
-        ball.dx = -5     
-    }
-    if (ball.dx > 0) {
-        ball.dx = 5      
-    }
-    if (ball.dy < 0) {
-        ball.dy = -5      
-    }
-    if (ball.dy > 0) {
-        ball.dy = 5      
-    }
+    ball.speed = 5
+
 }
 
 hardButton.onchange = () => {
-    if (ball.dx < 0) {
-        ball.dx = -7     
-    }
-    if (ball.dx > 0) {
-        ball.dx = 7      
-    }
-    if (ball.dy < 0) {
-        ball.dy = -7      
-    }
-    if (ball.dy > 0) {
-        ball.dy = 7      
-    }
+    ball.speed = 7
 }
 
 function checkCollisions(){
     if (ball.collide(paddle)) {
         ball.dy *= (-1)
+        let l = [-1, 1]
+        ball.dx = l[Math.floor(Math.random()* l.length)]
+        ball.angle.x = ball.angle.all[Math.floor(Math.random()* ball.angle.all.length)]
+        ball.angle.y = ball.angle.all[Math.floor(Math.random()* ball.angle.all.length)]
         paddleSound.currentTime = 0
         paddleSound.play()
     }
@@ -322,6 +305,10 @@ function checkCollisions(){
         if (brick.visible) {
             if (ball.collide(brick)) {
                 ball.dy *= (-1)
+                let l = [-1, 1]
+                ball.dx = l[Math.floor(Math.random()* l.length)]
+                ball.angle.x = ball.angle.all[Math.floor(Math.random()* ball.angle.all.length)]
+                ball.angle.y = ball.angle.all[Math.floor(Math.random()* ball.angle.all.length)]        
                 reboundSound.currentTime = 0
                 reboundSound.play()   
                 gameState.score += 100
@@ -330,6 +317,10 @@ function checkCollisions(){
             }
         }
     }
+}
+
+window.onload = function(){
+    easyButton.checked = true
 }
 
 function mainLoop(){
