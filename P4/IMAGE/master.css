@@ -1,7 +1,6 @@
 
 body{
     text-align: center;
-
 }
 
 #container{
@@ -10,10 +9,15 @@ body{
     margin-left: 500px;
 }
 
-.button{
-    margin-left: 0px;
-}  
-
 .image{
     height: 250px;
+}
+
+button{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+button:hover{
+  background-color: gainsboro;
 }
